@@ -134,11 +134,11 @@ function App() {
             <button onClick={() =>
                 handleUpdate(livro.id, {
                 ...livro,
-                isbn: novoLivro.isbn ? ( livroAtualizado.isbn) : null,
-                titulo: novoLivro.titulo ? ( livroAtualizado.titulo) : null,
-                editora: novoLivro.editora ? ( livroAtualizado.editora) : null,
-                autor: novoLivro.autor ? ( livroAtualizado.autor) : null,
-                genero: novoLivro.genero ? ( livroAtualizado.genero) : null,
+                isbn: novoLivro.isbn !== "" ? ( novoLivro.isbn) : livro.isbn,
+                titulo: novoLivro.titulo !== "" ? ( novoLivro.titulo) : livro.titulo,
+                editora: novoLivro.editora !== "" ? ( novoLivro.editora) : livro.editora,
+                autor: novoLivro.autor !== "" ? ( novoLivro.autor) : livro.autor,
+                genero: novoLivro.genero !== "" ? ( novoLivro.genero) : livro.genero,
                 })                
               }
             >
